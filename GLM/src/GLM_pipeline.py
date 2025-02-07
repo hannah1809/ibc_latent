@@ -29,7 +29,7 @@ def find_fmri_files(base_dir, subject, task):
 def build_and_save_pipeline(subject, task, session, direction):
     events_file_path = glob.glob(os.path.join(base_dir, f'sub-{subject}', f'ses-{session}', 'func', f'sub-{subject}_ses-{session}_task-{task}_dir-{direction}_events.tsv'), recursive=True)[0]
     events_data = pd.read_csv(events_file_path, sep='\t')
-    conditions = events_data['trial_type'].unique()
+    conditions = events_data['trial_type'].unique() # Extract the unique conditions from the events data
 
     fmri_file_path = glob.glob(os.path.join(base_dir, f'sub-{subject}', f'ses-{session}', 'func', f'sub-{subject}_ses-{session}_task-{task}_dir-{direction}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz'), recursive=True)[0]
     fmri_img = nib.load(fmri_file_path)
