@@ -9,9 +9,9 @@ Raw data can be found on [OpenNeuro](https://openneuro.org/datasets/ds002685/ver
 
 - **GLM/**: Contains the GLM model that is first used to create beta maps for each subject and task, and then in the second step to create contrasts.
   - **src/**
+    - **config.py**: Defines the directories.
     - **GLM_pipeline.py**: Main logic for the GLM pipeline.
     - **tasks_contrasts.py**: Dictionary of tasks and their corresponding conditions -> contrasts.
-    - **config.py**: Defines the directories.
   - **requirements.txt**: Project dependencies.
   - **README.md**: Project documentation.
 - **RSA/**: This folder will be added later to build latent representations.
