@@ -1,4 +1,4 @@
-# My Python Project
+# GLM Pipeline
 
 ## Overview
 This project implements a Generalized Linear Model (GLM) pipeline. It includes functionality for selecting and processing various tasks based on user-defined conditions. It is based on BIDS structure and used with preprocessed data of the IBC dataset.
