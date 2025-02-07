@@ -1,14 +1,14 @@
 # My Python Project
 
 ## Overview
-This project implements a Generalized Linear Model (GLM) pipeline. It includes functionality for selecting and processing various tasks based on user-defined conditions.
+This project implements a Generalized Linear Model (GLM) pipeline. It includes functionality for selecting and processing various tasks based on user-defined conditions. It is based on BIDS structure and used with preprocessed data of the IBC dataset.
 
 ## Project Structure
 ```
-my-python-project
-├── src
+GLM
+├── src                      # Source code
 │   ├── GLM_pipeline.py      # Main logic for the GLM pipeline
-│   └── tasks_conditions.py   # List of tasks and their corresponding conditions
+│   └── tasks_contrasts.py   # Dictionary of tasks and their corresponding conditions -> contrasts
 ├── requirements.txt          # Project dependencies
 └── README.md                 # Project documentation
 ```
@@ -17,7 +17,7 @@ my-python-project
 
 - **src/GLM_pipeline.py**: Contains the main logic for the GLM pipeline, including the selection and processing of tasks.
   
-- **src/tasks_conditions.py**: This file will contain a list of tasks and their corresponding conditions based on user selections.
+- **src/tasks_contrasts.py**: This file will contain a list of tasks and their corresponding conditions based on user selections. It should be transformed into a dictionary with the contrasts (e.g. condition1 - condition2) that want to used for comparing beta maps.
 
 - **requirements.txt**: Lists the dependencies required for the project.
 
@@ -29,6 +29,3 @@ To install the required dependencies, run:
 ```
 pip install -r requirements.txt
 ```
-
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for any suggestions or improvements.
