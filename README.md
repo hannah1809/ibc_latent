@@ -1,5 +1,6 @@
 # ibc_latent
 Analysis code using the publicly available IBC (Individual Brain Charting) dataset.
+Goal: Build latent representations of multiple cognitive tasks to better understand the Frontoparietal Network.
 
 ## Project Structure
 
