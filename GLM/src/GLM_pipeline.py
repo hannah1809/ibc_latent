@@ -14,7 +14,7 @@ from tasks_conditions import task_conditions
 # Define the parameters to iterate over
 subjects = [d for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d)) and d.startswith('sub-')] # Subdirectories in base_dir that match the pattern 'sub-XX'
 tasks = tasks_conditions.keys() # Taken from tasks_conditions.py
-sessions = tasks_conditions.values() # Taken from tasks_conditions.py
+sessions = [d for d in os.listdir(os.path.join(base_dir, f'sub-{subject}')) if os.path.isdir(os.path.join(base_dir, f'sub-{subject}', d)) and d.startswith('ses-')] # Subdirectories in base_dir/sub-XX that match the pattern 'ses-YY'
 directions = ['ap', 'pa']
 
 # Ensure the output directory exists
@@ -29,7 +29,7 @@ def find_fmri_files(base_dir, subject, task):
 def build_and_save_pipeline(subject, task, session, direction):
     events_file_path = glob.glob(os.path.join(base_dir, f'sub-{subject}', f'ses-{session}', 'func', f'sub-{subject}_ses-{session}_task-{task}_dir-{direction}_events.tsv'), recursive=True)[0]
     events_data = pd.read_csv(events_file_path, sep='\t')
-    conditions = task_conditions[task]
+    conditions = events_data['trial_type'].unique()
 
     fmri_file_path = glob.glob(os.path.join(base_dir, f'sub-{subject}', f'ses-{session}', 'func', f'sub-{subject}_ses-{session}_task-{task}_dir-{direction}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz'), recursive=True)[0]
     fmri_img = nib.load(fmri_file_path)
