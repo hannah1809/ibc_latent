@@ -7,11 +7,11 @@ This project implements a Generalized Linear Model (GLM) pipeline. It includes f
 ```
 GLM
 ├── src                      # Source code
-│   ├── GLM_pipeline.py      # Main logic for the GLM pipeline
-│   └── tasks_contrasts.py   # Dictionary of tasks and their corresponding conditions -> contrasts
-├── config.py                # Defines the directories
-├── requirements.txt         # Project dependencies
-└── README.md                # Project documentation
+│   ├── config.py            # Defines the directories
+│   ├── GLM_pipeline.py      # Main logic for the GLM pipeline (Run this!)
+│   └── tasks_contrasts.py   # Dictionary of tasks and their corresponding conditions -> 
+├── README.md                # Project documentation
+└── requirements.txt         # Project dependencies
 ```
 
 ## Files Description
