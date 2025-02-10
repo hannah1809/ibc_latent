@@ -9,11 +9,11 @@ from nilearn.plotting import plot_design_matrix, plot_stat_map
 import matplotlib.pyplot as plt
 
 from config import base_dir, output_dir
-from tasks_conditions import task_conditions
+from task_conditions import task_conditions
 
 # Define the parameters to iterate over
 subjects = [d for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d)) and d.startswith('sub-')] # Subdirectories in base_dir that match the pattern 'sub-XX'
-tasks = tasks_conditions.keys() # Taken from tasks_conditions.py
+tasks = task_conditions.keys() # Taken from task_conditions.py
 sessions = [d for d in os.listdir(os.path.join(base_dir, f'sub-{subject}')) if os.path.isdir(os.path.join(base_dir, f'sub-{subject}', d)) and d.startswith('ses-')] # Subdirectories in base_dir/sub-XX that match the pattern 'ses-YY'
 directions = ['ap', 'pa']
 
