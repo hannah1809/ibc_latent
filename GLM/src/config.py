@@ -1,3 +1,5 @@
+import os
+
 # Define the directories based on the hostname
 hostname = os.uname().nodename
 if hostname == 'nyx-login0.hpc.kyb.local':
@@ -9,3 +11,4 @@ else:
     output_dir = '/Users/hannahmuller/nyx_mount/ibc_code/ibc_output'
     code_dir = '/Users/hannahmuller/nyx_mount/ibc_code/ibc_latent'
 print(f"Base directory set to: {base_dir}")
+print(f"Output directory set to: {output_dir}")
