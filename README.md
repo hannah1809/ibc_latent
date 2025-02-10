@@ -7,12 +7,18 @@ Raw data can be found on [OpenNeuro](https://openneuro.org/datasets/ds002685/ver
 
 ## Project Structure
 
-- **GLM/**: Contains the GLM model that is first used to create beta maps for each subject and task, and then in the second step to create contrasts.
-  - **src/**
-    - **config.py**: Defines the directories.
-    - **GLM_pipeline.py**: Main logic for the GLM pipeline.
-    - **tasks_contrasts.py**: Dictionary of tasks and their corresponding conditions -> contrasts.
-  - **requirements.txt**: Project dependencies.
-  - **README.md**: Project documentation.
-- **RSA/**: This folder will be added later to build latent representations.
-- **csv files**: Contain for each subject an overview about in which sessions (+ how often) each task was done.
+```
+GLM                          # Creating beta maps for each subject and task condition/contrast
+├── src                      
+│   ├── config.py            # Defines the directories.
+│   ├── GLM_pipeline.py      # Main logic for the GLM pipeline.
+│   └── tasks_contrasts.py   # Dictionary of tasks and their corresponding conditions -> contrasts.
+├── README.md                
+└── requirements.txt         # Project dependencies
+RSA                          # !! This folder will be added later to build latent representations.
+├── src                      
+│   ├── config.py            # Defines the directories.
+├── README.md                
+common_task_sessions.csv     # Contain for each subject an overview about in which sessions (+ how often) each task was done.
+First_GLM.ipynb              # Jupyter notebook to explore GLM outputs (tasks, design matrix,...)
+```
