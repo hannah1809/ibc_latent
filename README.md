@@ -1,6 +1,6 @@
 # ibc_latent
 
-## Note, this repo has been transferred to the Lab github page of the Cognitive Neuroscience & Neurotechnology Lab led by Dr. Romy Lorenz ([Cognitive-Neuroscience-Neurotechnology](https://github.com/Cognitive-Neuroscience-Neurotechnology/ibc_latent)).
+### Note, this repo has been transferred to the Lab github page of the Cognitive Neuroscience & Neurotechnology Lab led by Dr. Romy Lorenz ([Cognitive-Neuroscience-Neurotechnology/ibc_latent](https://github.com/Cognitive-Neuroscience-Neurotechnology/ibc_latent)).
 
 Analysis code using the publicly available IBC (Individual Brain Charting) dataset.
 
